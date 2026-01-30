@@ -94,6 +94,7 @@ function LoginForm() {
                                         className="flex-1 px-4 py-3 border border-gray-300 rounded-r-lg focus:ring-2 focus:ring-orange focus:border-orange outline-none"
                                         required
                                         maxLength={10}
+                                        suppressHydrationWarning
                                     />
                                 </div>
                             </div>
@@ -129,6 +130,7 @@ function LoginForm() {
                                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange focus:border-orange outline-none text-center text-2xl tracking-widest"
                                     required
                                     maxLength={6}
+                                    suppressHydrationWarning
                                 />
                             </div>
 
