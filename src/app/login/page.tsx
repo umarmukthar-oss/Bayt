@@ -1,12 +1,12 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, Suspense } from 'react'
 import { motion } from 'framer-motion'
 import { Phone, ArrowRight, Loader2 } from 'lucide-react'
 import { useAuth } from '@/contexts/AuthContext'
 import { useRouter, useSearchParams } from 'next/navigation'
 
-export default function LoginPage() {
+function LoginForm() {
     const [phone, setPhone] = useState('')
     const [otp, setOtp] = useState('')
     const [step, setStep] = useState<'phone' | 'otp'>('phone')
@@ -169,5 +169,17 @@ export default function LoginPage() {
                 </p>
             </motion.div>
         </div>
+    )
+}
+
+export default function LoginPage() {
+    return (
+        <Suspense fallback={
+            <div className="min-h-screen flex items-center justify-center bg-cream">
+                <Loader2 className="animate-spin text-maroon" size={40} />
+            </div>
+        }>
+            <LoginForm />
+        </Suspense>
     )
 }
