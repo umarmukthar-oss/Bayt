@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --maroon: #7B2D26;
+    --orange: #F4A261;
+    --cream: #FFF8F0;
+  }
+}
+
+@layer utilities {
+  .bg-maroon {
+    background-color: var(--maroon);
+  }
+
+  .text-maroon {
+    color: var(--maroon);
+  }
+
+  .border-maroon {
+    border-color: var(--maroon);
+  }
+
+  .bg-orange {
+    background-color: var(--orange);
+  }
+
+  .text-orange {
+    color: var(--orange);
+  }
+
+  .shadow-orange\/30 {
+    --tw-shadow-color: rgba(244, 162, 97, 0.3);
+    --tw-shadow: var(--tw-shadow-colored);
+  }
+
+  .bg-cream {
+    background-color: var(--cream);
+  }
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--cream);
+}
+
+.font-serif {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--maroon);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5a1f1a;
+}
